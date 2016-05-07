@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 2</title>
+</head>
+<body>
+<div id="page-header"></div>
+<div id="content"></div>
+<!--dependencies - amusement-data.js & amusement.js-->
+<script type="text/javascript" src="js/amusement-data.js" ></script>
+<script type="text/javascript" src="js/amusement.js" ></script>
+<script>
+    <!--HTML w/ JS-->
+    document.getElementById("page-header").innerHTML="<h2>Chaning DOM with JS</h2>";
+
+    var am=amusement;
+    var results="";
+
+    function amusementInfo(am){
+        for (var i=0; i<am.length; i++) {
+
+            var name="<b>Name:</b> " + am[i].name;
+            var price="<b>Price:</b> " + am[i].price;
+
+            if (am[i].children == true) {
+                var child= "<b>Children:</b> allowed";
+            } else {
+                var child="<b>Children:</b> not allowed";
+            }
+
+            var days="<b>Days open:</b> " + am[i].open;
+
+            results+=name + "<br />" + price + "<br />" + child + "<br />" + days + "<br /><br />";
+
+        }
+
+        document.getElementById("content").innerHTML=results;
+    }
+    var getAmusement=amusementInfo(am);
+</script>
+</body>
+</html>

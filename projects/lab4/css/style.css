@@ -1,0 +1,54 @@
+
+
+/**** ADD YOUR STYLES ****/
+body {
+  background: lightgray;
+}
+
+/****************/
+/*   BAR-CHART  */
+/****************/
+
+.bar {
+  fill: #3C948B;
+}
+
+.bar:hover {
+  fill: #327972;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line,
+.domain {
+  fill: none;
+  stroke: #888;
+  shape-rendering: crispEdges;
+}
+
+#chart-area text {
+  font-size: 11px;
+}
+
+.axis-label {
+  fill: #888;
+  font-size: 11px;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+
+}

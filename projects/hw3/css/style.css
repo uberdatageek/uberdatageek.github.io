@@ -1,0 +1,111 @@
+body {
+    font-family: Arial;
+    font-size: 12px;
+    background: #aaaaaa;
+}
+
+.container {
+    padding-left: 50px;
+}
+
+
+.the-g {
+
+    background: gainsboro;
+    /*max-width: 60%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: solid;
+    border-width: 1px;
+    border-top-color: #c4c4c4;*/
+
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+
+
+.top-g {
+    background: gainsboro;
+}
+
+h2 {
+    background-color: #aaaaaa;
+    color: black;
+    padding: 15px;
+    width: 565px;
+    margin-bottom: 40px;
+}
+
+.the-col {
+
+
+}
+
+#the-data {
+    padding-left: 10px;
+
+}
+
+.list-group-item {
+    background-color: gainsboro;
+    border: solid;
+    border-color: #aaaaaa;
+    border-width: 1px;
+}
+
+h4 {
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+span.side-a {
+    float: left;
+    width: 100px;
+    margin-left: -5px;
+}
+
+span.side-b {
+
+}
+
+.d-div {
+    width: 100%;
+
+}
+
+li {
+    margin-left: -40px;
+}
+
+.the-img {
+    max-width: 200px;/**/
+    border: solid;
+    border-width: 1px;
+    border-color: pink;
+    margin-left: 30px;
+}
+
+
+#building-count {
+/* margin-top: -50px;*/
+}
+
+.count-col {
+ width: 400px;
+}
+
+/* //This is the CSS code for the FAILED attempt at using a class
+span.bld-height {
+ font-family: sans-serif;
+ font-size: 11px;
+ color: white;
+ text-anchor: end;
+}
+*/

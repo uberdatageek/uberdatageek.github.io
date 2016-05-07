@@ -1,0 +1,693 @@
+<!-- DOCTYPE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Team Inventum Final Project (cs171)</title>
+	<!-- Required meta tags always come first -->
+	<meta charset="utf-8">
+	<meta name="author" content="Team Inventum">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link href="css/jquery-ui-1.8.20.custom.css" rel="stylesheet">
+	<link href="css/jquery.handsontable.css" rel="stylesheet">
+	<link href="css/jquery.motionchart.css" rel="stylesheet">
+	<link href="css/jquery.contextMenu.css" rel="stylesheet">
+
+
+
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body id="page-top" >
+
+
+
+<!--wrapper start-->
+<div class="wrapper" id="wrapper">
+
+	<!--Navbar here-->
+	<nav class="navbar navbar-custom navbar-fixed-top navbar-inverse" role="navigation">
+		<div class="container-fluid" >
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-main-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand page-scroll" href="#page-top" title="Visualization (cs171)">Team Inventum</a>
+			</div>
+			<div  class="collapse navbar-collapse navbar-right navbar-main-collapse">
+				<ul class="nav navbar-nav menu-container">
+					<li class="hidden"><a href="#page-top"></a></li>
+					<li><a class="page-scroll menu-bck" href="#poor">The Story</a></li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle menu-bck" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Understanding<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a class="page-scroll menu-bck" href="#rp">Defined</a></li>
+							<li><a class="page-scroll menu-bck" href="#theories">Why</a></li>
+						</ul>
+					</li>
+					<li><a class="page-scroll menu-bck" href="#question">Question</a></li>
+
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle menu-bck" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">US<span class="caret"></span></a>
+						<ul class="dropdown-menu menu-bck">
+							<li><a class="page-scroll menu-bck" href="#us-choro">by States</a></li>
+							<li><a class="page-scroll menu-bck" href="#tech-effect">Through the Years</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle menu-bck" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Case Study<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a class="page-scroll menu-bck" href="#case-study">Case Study: California</a></li>
+							<li><a class="page-scroll menu-bck" href="#cali-choro">by Counties</a></li>
+							<li><a class="page-scroll menu-bck" href="#cali-case">County Comparison</a></li>
+							<li><a class="page-scroll menu-bck" href="#cali-tech-effect">Through the Years</a></li>
+						</ul>
+					</li>
+					<li><a class="page-scroll menu-bck" href="#conclusion">Insight</a></li>
+					<!--<li><a class="page-scroll menu-bck" href="#" data-toggle="modal" data-target="#myModal3" title="Motion Chart Tutorial">Tutorial</a></li>-->
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Modal Chart Tutorial-->
+    <div id="myModal3" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<a href="#" class="close" data-dismiss="modal">&times;</a>
+					<h4 class="modal-title">Chart Tutorial</h4>
+				</div>
+				<div class="modal-body">
+					<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/GetnEDxl3b8" frameborder="0" allowfullscreen></iframe>-->
+				</div>
+				<div class="modal-footer">
+					<a href="#" type="button" class="btn btn-default" data-dismiss="modal">Close</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Gini Def.-->
+	<div id="myModal4" class="modal fade gini-modal" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<a href="#" class="close" data-dismiss="modal">&times;</a>
+					<h4 class="modal-title">Gini Coefficient</h4>
+				</div>
+				<div class="modal-body">
+					<p>A Gini Coefficient of zero means incomes are the same across all households. A Gini Coefficient of 100 indicates that all income is concentrated in a single household. </p>
+				</div>
+				<div class="modal-footer">
+					<a href="#" type="button" class="btn btn-default" data-dismiss="modal">Close</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal INEQ WordCloud-->
+	<div id="myModal5" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<a href="#" class="close" data-dismiss="modal">&times;</a>
+					<h4 class="modal-title">Skill-Bias Word Cloud</h4>
+				</div>
+				<div class="modal-body">
+					<img src="img/ineq-wc.png" />
+				</div>
+				<div class="modal-footer">
+					<a href="#" type="button" class="btn btn-default" data-dismiss="modal">Close</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--header-->
+	<header>
+		<div class="banner" id="banner">
+			<div class="parallax" style="background-image: url(img/ineq.jpg);">
+				<div class="parallax-pattern-overlay">
+					<div class="container" id="size-banner">
+						<!--<a href="#"><img id="site-title" src="img/logo.png" alt="logo"/></a>-->
+						<h2 class="display-2">Economic Inequality</h2>
+						<h3 class="learn"><span class="subTitleHead">and the Tech Effect</span></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="home-btn-right" class="nav-bt-right n-btn"><a class="page-scroll" href="#poor">Begin Story</a></div>
+	</header>
+
+	<!--WORKING POOR-->
+	<section id="poor" class="poor">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="point-area text-center">
+						<p><span class="exp">Half</span> the US population lives in <span class="exp">poverty</span> or is <span class="exp">low-income</span>, according to US Census data. However, compared to most developed nations, <span class="exp">Americans</span> remain <span class="exp">less concerned</span> about rising <span class="exp">Economic Inequality</span>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--INTRO-->
+	<section id="rp" class="rp">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="heading">
+						<!--<img class="dividerline" src="img/sep.png" alt="">-->
+						<h2 class="text-center">Economic Inequality</h2>
+						<!--<img class="dividerline" src="img/sep.png" alt="">-->
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="rp-chart">
+						<h3>Education and Earning Capcity</h3>
+						<div id="wage-line"></div>
+					</div>
+				</div>
+			<!--</div>
+			<div class="row">-->
+				<div class="col-lg-3">
+					<div class="rp-chart2">
+						<h3>Gini Coefficient</h3>
+						<p>A common measure of inequality is the Gini Coefficient, which indicates how incomes are distributed throughout the population. Gini Coefficient is primarily used to measure inequality in this study.</p><a href="#" data-toggle="modal" data-target="#myModal4" title="Gini Coefficient Cont.">more...</a>
+						<div class="gini-dia"><img src="img/gini.png" /></div>
+					</div>
+				</div>
+			</div>
+			<div class="row btm-rw">
+				<div class="col-lg-12 btm-rw-txt">
+					<div class="btm-text">
+						<h4>What divides the rich and poor?</h4>
+						<p>Economic (Income) inequality is the unequal distribution of household or individual income across the various participants in an economy. There has been a significant increase in economic inequality in America since the 1970s. Roughly more than 70% of the world's countries have more equal income distribution than the US.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--THEORIES-->
+	<section id="theories" class="theories">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="point-area text-center">
+						<p>A widening disparity exist between wages and productivity, which signifies a shift in GDP share from labor to capital. Possible theories include...</p>
+					</div>
+				</div>
+			</div>
+			<div class="row theo-box-top">
+				<div class="col-lg-4 theo-box">
+					<h4>Globalization</h4>
+					<p>Low skilled American workers have been losing out to competition from low-wage workers in "Emerging" economies.</p>
+				</div>
+				<div class="col-lg-4 theo-box-main">
+					<h4>Skill-Biased</h4>
+					<p>According to the skill-biased technical change theory income distribution favors high-skilled workers over low-skilled labor.</p>
+				</div>
+				<div class="col-lg-4 theo-box">
+					<h4>Super Star Hypothesis</h4>
+					<p>Modern technologies of communication handsomely rewards winners while leaving losers empty handed.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--QUESTION-->
+	<section id="question" class="question">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="question-area text-center">
+						<p><span class="lbl">Skill-Bias:</span> Has high tech been truly beneficial to all?</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="quote-area">
+						<p><i>“The notion of ‘skill-bias’ —and the literature that has recently blossomed
+							around it—has introduced the theoretical possibility that technological
+							progress benefits only a sub-group of workers, placing technical change
+							also at the centerstage of the income distribution debate”</i>
+							<br/>- Giovanni L. Violante</p>
+					</div>
+				</div>
+			</div>
+			<div class="row btm-rw">
+				<div class="col-lg-12 btm-rw-txt">
+					<div class="btm-text">
+						<h4>What is the Skill-Bias?</h4>
+						<p>Skill biased technical change is defined as a shift in production technology that favors highly skilled or educated workers. Information technology leverages the abilities of a highly skilled worker to be exponentially more productive than an unskilled worker, therefore increasing their demand. <a href="#" data-toggle="modal" data-target="#myModal5" title="Skill-Bias Word Cloud">View Skill-Bias Word Cloud</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--US CHOROPLETH-->
+	<section class="us-choro" id="us-choro">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="heading">
+						<h2>US by States</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2 col-centered text-center">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="control-label" for="stat-type">Metric</label>
+							<select class="form-control" id="stat-type">
+								<option value="gini">Gini</option>
+								<option value="realIncWage">Average Income</option>
+								<option value="pctTechnicalWorker">Percent High Tech Workers</option>
+								<option value="unemployementRate">Unemployment Rate</option>
+								<option value="realIncWageRat90_10">90-10 Wage Ratio</option>
+								<option value="laborSupply_hl">High-Low Skilled Labor Ratio</option>
+								<option value="realIncWageRat_cg_hs">College to High School Wage Ratio</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-centered text-center">
+
+					<!--<div id="usmap"><img src="img/us-sample.png" /></div>-->
+					<div id="usa-map"> </div>
+					<!--Mike added slider-->
+					<div id="sliderContainer">
+						<input id="timeslide" type="range" min="1980" max="2014" value="1980" step="1"/><br>
+						<span id="range">1980</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--TECH EFFECT-->
+	<section class="tech-effect" id="tech-effect">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="heading">
+						<h2>in Motion: US by states</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-9">
+					<div id="econ-state-us">RECESSION</div>
+					<div class="motion-container"><div class="motionchart" id="us-motion" height="500px" width="600px"></div></div>
+				</div>
+				<div class="col-lg-3">
+					<div class="rp-chart2">
+						<h2>Fast Facts...</h2>
+						<p>A rise in the high tech industry in a given state positively correlates with economic inequality (per gini).</p>
+						<p>Economic inequality varies at the state level.</p>
+						<p>Big rises in economic inequality in the Maryland, Virginia & DC metro area corresponds with recent tech booms.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--CASE STUDY-->
+	<section id="case-study" class="case-study">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="question-area text-center">
+						<p><span class="lbl">Case Study:</span> Economic Inequality in California</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="sub-area text-center">
+						<p>Silicon Valley Tech Effect</p>
+					</div>
+				</div>
+			</div>
+			<div class="row btm-rw">
+				<div class="col-lg-12 btm-rw-txt">
+					<div class="btm-text">
+						<h4>The Impact of Technology (Skill-Bias) in California</h4>
+						<p>The Gini coefficient (a measure of income inequality) for household income in the Bay Area was 48.7 in 2013. This is comparable to the Gini coefficient for the state as a whole (49.0) and greater than that of the entire United States (48.1) in 2013.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--CALIFORNIA CHOROPLETH-->
+	<section class="cali-choro" id="cali-choro">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5">
+					<div class="heading">
+						<h2>California by Counties</h2>
+					</div>
+					<div class="col-md-5">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="control-label" for="stat-type2">Metric</label>
+							<select class="form-control" id="stat-type2">
+								<option value="gini">Gini</option>
+								<option value="realIncWage">Average Income</option>
+								<option value="pctTechnicalWorker">Percent High Tech Workers</option>
+								<option value="unemployementRate">Unemployment Rate</option>
+								<option value="realIncWageRat90_10">90-10 Wage Ratio</option>
+								<option value="laborSupply_hl">High-Low Skilled Labor Ratio</option>
+								<option value="realIncWageRat_cg_hs">College to High School Wage Ratio</option>
+							</select>
+						</div>
+					</form>
+					</div>
+				</div>
+
+
+				<div class="col-md-6 col-centered text-center">
+
+					<!--<div id="calimap"><img src="img/cali-choro.png" alt=""></div>-->
+					<div class="col-md-4 col-centered text-center" id="ca-map"></div>
+					<!--Mike added slider-->
+					<div id="outside-contain">
+					<div id="sliderContainer2">
+						<input id="timeslide2" type="range" min="1996" max="2014" value="1996" step="1"/><br>
+						<span id="range2">1996</span>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--CALI CASE-->
+	<section class="cali-case" id="cali-case">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="heading">
+						<!--<img class="dividerline" src="img/sep.png" alt="">-->
+						<h2>California: County Camparison</h2>
+						<!--<img class="dividerline" src="img/sep.png" alt="">-->
+						<p>Counties in California that are largely dominated by tech industries (Santa Clara & San Mateo) versus those that are not (LA & Sonoma).</p>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="row">
+				<div class="col-sm-2 col-centered text-center">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="control-label" for="getgini">Select Year</label>
+							<select class="form-control" id="getgini">
+								<option value="1998">1998</option>
+								<option value="1999">1999</option>
+								<option value="2000">2000</option>
+								<option value="2001">2001</option>
+								<option value="2002">2002</option>
+								<option value="2003">2003</option>
+								<option value="2004">2004</option>
+								<option value="2005">2005</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div id="view-control">Comparisons: &nbsp;&nbsp;<a href="#" id="viewOne">Santa Clara Vs. Los Angeles</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" id="viewTwo">San Mateo Vs. Sonoma</a></div>
+				</div>
+			</div>
+			<div class="row">
+
+				<div id="group-one">
+					<div class="col-lg-5">
+						<div class="card card-inverse card-success text-center">
+							<!--<img class="card-img-top" src="img/card3.jpg" alt="Card image cap">-->
+							<div class="card-block">
+								<div class="gini" id="santaclara"></div>
+								<h4 class="card-title" id="county-one">Santa Clara County</h4>
+								<p class="card-text">Santa Clara County is the headquarters for approximately 6500 high tech companies, including many of the world's largest tech companies.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 gini text-center" id="amountTo"> </div>
+
+					<div class="col-lg-5">
+						<div class="card card-inverse card-info text-center">
+							<!--<img class="card-img-top" src="img/card4.jpg" alt="Card image cap">-->
+							<div class="card-block">
+								<div class="gini" id="la"></div>
+								<h4 class="card-title" id="county-two">LA County</h4>
+								<p class="card-text">Los Angeles County is commonly associated with the entertainment industry (all six major film studios). LA is also known for international trade.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="group-two">
+					<div class="col-lg-5">
+						<div class="card card-inverse card-success text-center">
+							<!--<img class="card-img-top" src="img/card3.jpg" alt="Card image cap">-->
+							<div class="card-block">
+								<div class="gini" id="sanmateo"></div>
+								<h4 class="card-title">San Mateo County</h4>
+								<p class="card-text">In San Mateo County innovation thrives in industries such as bioscience, computer software, green technology, hospitality, financial management, health care, education and transportation.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 gini text-center" id="amountToNext"> </div>
+
+					<div class="col-lg-5">
+						<div class="card card-inverse card-info text-center">
+							<!--<img class="card-img-top" src="img/card4.jpg" alt="Card image cap">-->
+							<div class="card-block">
+								<div class="gini" id="sonoma"></div>
+								<h4 class="card-title">Sonoma County</h4>
+								<p class="card-text">About 80 percent of non-pasture agricultural land in Sonoma County is for growing wine grapes—58,280.4 acres. In 2006 the county grape harvest amounted to over 185,000 tons, exceeding Napa County's harvest by over 30 percent.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<!-- Modal Santa Clara Companies-->
+					<div id="myModal1" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+
+							<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<a href="#" class="close" data-dismiss="modal">&times;</a>
+									<h4 class="modal-title">Santa Clara Tech Companies</h4>
+								</div>
+								<div class="modal-body">
+									<img class="img-responsive" src="img/santaclara.png" alt="...">
+								</div>
+								<div class="modal-footer">
+									<a href="#" type="button" class="btn btn-default" data-dismiss="modal">Close</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- Modal San Mateo Companies -->
+					<div id="myModal2" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+
+							<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<a href="#" class="close" data-dismiss="modal">&times;</a>
+									<h4 class="modal-title">San Mateo Tech Companies</h4>
+								</div>
+								<div class="modal-body">
+									<img class="img-responsive" src="img/sanmateo.png" alt="...">
+								</div>
+								<div class="modal-footer">
+									<a href="#" type="button" class="btn btn-default" data-dismiss="modal">Close</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div id="viewcloud"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--Motion Chart - California Counties-->
+	<section class="cali-tech-effect" id="cali-tech-effect">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="heading">
+						<h2>in Motion: California</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-9">
+					<div id="econ-state-ca">RECESSION</div>
+					<div class="motion-container"><div class="countyMotionChart" id="ca-motion" height="500px" width="600px"></div></div>
+				</div>
+				<div class="col-lg-3">
+					<div class="rp-chart2">
+						<h2>Fast Facts...</h2>
+						<p>San Clara and San Mateo Counties had the highest gini coefficients leading up to '05</p>
+						<p>Santa Clara County has the largest % of high tech activity while playing host to some of the world's largest & most powerful tech firms.</p>
+						<p>With a slow increase in the tech sector, LA maintained a high gini coefficient through 2005</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--INSIGHT/CONCLUSION-->
+	<section class="conclusion" id="conclusion">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="conclusion-area text-center">
+						<p>In viewing economic inequality through the looking glass of California, Skill-Biased technical change plays a major role.
+							While many Americans agree that economic inequality is a big problem, most generally oppose the concept of wealth / income redistribution.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="insight-area">
+						<h4>Why understand Skill-Bias</h4>
+						<p>Understanding skill-bias is far reaching because policy makers could pursue initiatives that serve to lessen economic inequality.  For instance, freely available online resources to build technical knowledge (e.g. Coursera, Big Data University, Udacity, edX, open.edu, Khan Academy et al) could be encouraged. </p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="insight-area">
+						<h4>No Elixir, Just One First Step</h4>
+						<p>There exist no silver bullet to solve the challenge of Economic Inequality. However, development of technical knowledge through education is a good step in the right direction.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--footer-->
+	<section class="footer" id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 footer-info">
+					<p><b>by Team Inventum</b> (<a href="mailto:billy.yuen@gmail.com">Billy Yuen</a>, <a href="mailto:michael.brannan4@gmail.com">Michael Brannan</a> & <a href="mailto:ethanwade@g.harvard.edu">Ethan Wade</a>)<br></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div><!--wrapper end-->
+
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script src="js/jquery-1.7.2.min.js"></script>
+<!--<script src="js/jquery-1.9.1.min.js"></script>-->
+
+<script src="js/colorbrewer.js"></script>
+<script src="js/topojson.js"></script>
+<script src="js/d3.min.js"></script>
+<script src="js/queue.min.js"></script>
+
+<script src="js/jquery.easing.min.js"></script>
+
+<!-- Visualization objects -->
+
+<script src="js/usMap.js"></script>
+<script src="js/caMap.js"></script>
+<script src="js/lineGraph.js"></script>
+
+<!-- Load data, create motion visualizations-->
+<script src="js/loadStateData.js"></script>
+<script src="js/loadCountyData.js"></script>
+<script src="js/main.js"></script>
+<!--<script src="js/lineGraph2.js"></script>-->
+
+<script src="js/dependencies.min.js"></script>
+<script src="js/custom-bootstrap.js"></script>
+<script src="js/jquery.handsontable.js"></script>
+<script src="js/jquery.motionchart.js"></script>
+<script src="js/d3.tip.js"></script>
+<script src="js/rangeslider.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+
+
+	$('.motionchart').motionchart({
+		title: "State Wage Inequality with GINI index",
+		'data': data,
+		mappings: {key: 1, x: 4, y: 3, size: 2, color: 0, category: 0},
+		colorPalette: {	"Blue-Red": {from: "rgb(0,0,255)", to: "rgb(255,0,0)"}},
+		color: "Red-Blue",
+		play: false,
+		loop: true
+	});
+
+
+
+	$('.countyMotionChart').motionchart({
+		title: "Case study on 4 California counties",
+		'data': CACountyData,
+		mappings: {key: 0, x: 4, y: 3, size: 2, color: 1, category:1},
+		colorPalette: {	"Blue-Red": {from: "rgb(0,0,255)", to: "rgb(255,0,0)"}},
+		color: "Red-Blue",
+		play: false,
+		loop: true
+	});
+
+
+	//By default the recession title doesn't show
+	document.getElementById("econ-state-us").style.display = "none";
+	document.getElementById("econ-state-ca").style.display = "none";
+
+</script>
+
+</body>
+</html>

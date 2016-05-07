@@ -1,0 +1,90 @@
+body {
+    font: 10px sans-serif;
+    background: #e8dcc1;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.area {
+    fill: lightgreen;
+}
+
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+
+h2 {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+h4 {
+
+    font-size: 24px;
+    color: #e8dcc1;
+    background: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    width: 520px;
+    margin-top: 40px;
+    margin-left: -15px;
+
+
+}
+
+.line {
+    stroke: darkgreen;
+    fill: none;
+    stroke-width: 4px;
+}
+
+.btm {
+    padding-top: 50px;
+    padding-left: 10px;
+    font-family: "Arial Narrow";
+    font-size: 12px;
+}
+
+.bar {
+    fill: lightgreen;
+}
+
+.bar:hover {
+    fill: darkgreen;
+}
+
+.bar-label {
+    font-family: "Arial";
+    font-size: 14px;
+    font-color: darkgray;
+}
+
+#svg-container2 {
+    padding-left: 30px;
+}
+
+#svg-container {
+    padding-top: 20px;
+}
+
+.bck-img {
+
+    background-image: url('../images/zaatariwide-2_0.jpg');
+    background-repeat: repeat-y; /* for vertical repeat */
+    background-repeat: repeat-x; /* for horizontal repeat */
+    height: 132px;
+    width: 1200px;
+
+}

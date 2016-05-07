@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 Project</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+
+
+
+</head>
+
+    <div style="max-width: 1200px; padding-bottom: 50px;" class="container">
+        <div class="row top-g row-centered">
+            <div class="col-md-12 col-centered">
+                <h2>World's Tallest Buildings Dataset - HW3</h2>
+            </div>
+        </div>
+        <div class="row the-g row-centered">
+            <div class="col-md-5 col-centered">
+                <div id="svg-container"></div>
+            </div>
+            <div class="col-md-3 col-centered the-col">
+                <div id="the-img">Image HERE</div>
+            </div>
+            <div class="col-md-4 col-centered">
+                <div id="the-data">
+                    <h4 id="building">Column 3</h4>
+                    <ul class="list-head-style">
+                        <li class="list-group-item"><div class="d-div"><span class="side-a">Height</span><span class="side-b" id="height">data goes here</span></div></li>
+                        <li class="list-group-item"><div class="d-div"><span class="side-a">City</span><span class="side-b" id="city">data goes here</span></div></li>
+                        <li class="list-group-item"><div class="d-div"><span class="side-a">Floors</span><span class="side-b" id="floors">data goes here</span></div></li>
+                        <li class="list-group-item"><div class="d-div"><span class="side-a">Country</span><span class="side-b" id="country">data goes here</span></div></li>
+                        <li class="list-group-item"><div class="d-div"><span class="side-a">Completed</span><span class="side-b" id="completed">data goes here</span></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row the-g row-centered">
+            <div class="col-md-12 col-centered count-col">
+                <div id="building-count"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load JS libraries: jQuery, bootstrap, D3, D3 Tooltips -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

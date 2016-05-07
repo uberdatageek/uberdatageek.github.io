@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CS171 - HW 6</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/colorbrewer.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<!--	MALARIA
+			- Information
+			- Choropleth 
+			- Implementation of own sketch or tree visualization
+
+	-->
+<div style="max-width: 1200px; padding-bottom: 50px;" class="container">
+	<div class="row top-g row-centered">
+		<div class="col-md-12 col-centered">
+
+
+			<div id="main-header">
+				<div class="main-title"><h1>Global Fight Against Malaria in Africa</h1></div>
+				<div class="main-title-sub"><h4>Malaria is both preventable and curable</h4></div>
+			</div>
+
+
+		</div>
+	</div>
+	<div class="row the-g row-centered info-area">
+		<div class="col-md-5 col-centered">
+			<div id="sec1">
+				<div class="sec-title"><h3>What is Malaria?</h3></div>
+				<div class="sec-info-sub">Malaria is caused by the Plasmodium parasite and is transmitted by female Anopheles mosquitoes which bite between dusk and dawn.</div>
+				<div id="sec-img" class="sec-img">
+					<img src="img/malaria2.jpg" style="max-width: 450px;" />
+				</div>
+
+				<div class="sec-info"><span class="highlight"><strong>Symptoms: </strong></span>People infected with malaria often experience <strong>fever</strong>, <strong>chills</strong> and <strong>flu-like</strong> illness at first.</div>
+				<div class="sec-info"><span class="highlight"><strong>Who's at risk: </strong></span>Young <strong>children</strong>, <strong>pregnant women</strong> and <strong>non-immune travellers</strong> from malaria-free areas are highly vulnerable.</div>
+				<div class="sec-info"><span class="highlight"><strong>The Numbers: </strong></span>Roughly <strong>3.2 billion</strong> people are at risk of Malaria, with <strong>214 million</strong> cases reported in 2015.</div>
+			</div>
+
+			<div id="sec2" >
+				<div class="sec-title"><h3>Malaria between 2000 & 2015</h3></div>
+				<div class="sec-info-sub">Globally reported cases of malaria declined between 2000 & 2015</div>
+				<div id="sec-img2" class="sec-img">
+					<img src="img/malaria1.png"  style="max-width: 433px;"/>
+				</div>
+				<div class="sec-info"><span class="highlight"><strong>37% decline</strong></span> in malaria cases</div>
+				<div class="sec-info"><span class="highlight"><strong>60% decline</strong></span> in global malaria mortality rates</div>
+			</div>
+
+		</div>
+		<div class="col-md-7 col-centered the-col map-col">
+
+			<!--Chart Nav pane -->
+			<div id="viz-nav" class="viz-nav">
+				<ul class="nav nav-pills pull-right">
+					<li role="presentation" class="active"><a href="#" id="cases">Reported Cases</a></li>
+					<li role="presentation"><a href="#" id="funding" >Funding</a></li>
+					<li role="presentation"><a href="#" id="total-funding" >Toal Funding (ann.)</a></li>
+				</ul>
+			</div>
+
+			<div id="choro">
+				<div id="viz1-title" class="viz-title"></div>
+				<div id="option-control" class="opt-control">
+					<!--<label for="request-type" class="ctrl-label">View by:</label>-->
+					<select class="form-control" id="request-type">
+						<option value="Malaria_cases">Recorded Malaria Cases</option>
+						<option value="Suspected_malaria_cases">Suspected Malaria Cases</option>
+						<option value="At_risk">At Risk</option>
+						<option value="At_high_risk">At High Risk</option>
+					</select>
+				</div>
+				<div id="cmap" class="cmap"></div>
+				<div id="legend"><div id="l-title"></div></div>
+			</div>
+			<div id="viz-bar">
+				<div id="viz2-title" class="viz2-title"></div>
+				<div id="viz2-chart" class="viz2-chart"></div>
+				<div id="viz2-footer-note" class="footer-note"></div>
+			</div>
+			<div id="viz-bar2">
+				<!----><div id="info-div"></div>
+				<div id="viz3-title" class="viz3-title"></div>
+				<div id="viz3-chart" class="viz2-chart"></div>
+				<div id="viz3-footer-note" class="footer-note"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<!-- Load JS libraries -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/queue.min.js"></script>
+	<script src="js/topojson.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3.tip.js"></script>
+	<script src="js/colorbrewer.js"></script>
+
+	<!-- Choropleth and second visualization -->
+	<!---->
+
+	<!----><script src="js/vis-choropleth.js"></script>
+	<script src="js/vis-second.js"></script>
+	<script src="js/vis-third.js"></script>
+
+
+
+
+
+	
+</body>
+</html>

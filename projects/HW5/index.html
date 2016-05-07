@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CS171 - HW 5</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:500,400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<div style="max-width: 1200px; padding-bottom: 50px;" class="container">
+		<div class="row top-g row-centered">
+			<div class="col-md-12 col-centered">
+				<div class="nav"><h2><b>Fifa WorldCup</b>&nbsp;&nbsp;All Time Statistics</h2></div>
+			</div>
+		</div>
+		<div class="row the-g row-centered">
+			<div class="col-md-5 col-centered">
+				<label for="request-type" class="ctrl-label">Arranged by:</label>
+				<select class="form-control" id="request-type">
+					<option value="Goals">Goals</option>
+					<option value="Avg. Goals">Average Goals</option>
+					<option value="Matches">Matches</option>
+					<option value="Teams">Teams</option>
+					<option value="Avg. Attnd.*">Average Attendance</option>
+				</select>
+			</div>
+			<div class="col-md-7 col-centered the-col sort-control">
+				<label for="request-type" class="ctrl-label-search">Search by:</label>
+				<form class="form-inline">
+					<input type="text" class="input-small sort-field" placeholder="&nbsp;&nbsp;From" id="yrfrom"/>
+					<input type="text" class="input-small sort-field" placeholder="&nbsp;&nbsp;To" id="yrto"/>
+					<button type="submit" class="btn sort-btn" id="sort-btn">sort</button>
+					<button class="btn sort-btn2" id="sort-btn2">reset</button>
+				</form>
+			</div>
+		</div>
+		<div class="row the-g row-centered">
+			<div class="col-md-8 col-centered">
+				<div id="chart-area"></div>
+			</div>
+			<div class="col-md-4 col-centered the-col">
+
+				<div class="display-box">
+					<div id="title" class="display-box-inner" ><h4>2014 WorldCup Info.</h4></div>
+					<div id="winner" class="display-box-inner" ><p><b>Winner:</b>&nbsp;&nbsp;Germany</p></div>
+					<div id="goals" class="display-box-inner" ><p><b># of Goals:</b>&nbsp;&nbsp;171</p></div>
+					<div id="average_goals" class="display-box-inner" ><p><b>Average # of Goals:</b>&nbsp;&nbsp;2.7</p></div>
+					<div id="matches" class="display-box-inner"><p><b># of Matches:</b>&nbsp;&nbsp;64</p></div>
+					<div id="teams" class="display-box-inner"><p><b># of Teams:</b>&nbsp;&nbsp;32</p></div>
+					<div id="average_attendance" class="display-box-inner"><p><b>Average Attendance:</b>&nbsp;&nbsp;52918</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="row top-g row-centered">
+			<div class="col-md-12 col-centered">
+				<div class="note">* Average Attendance</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Load JS libraries: jQuery, bootstrap, D3, D3 tooltip -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3.tip.js"></script>
+
+	<!-- Your implementation -->
+	<script src="js/main.js"></script>
+</body>
+</html>
