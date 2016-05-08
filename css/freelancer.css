@@ -126,7 +126,7 @@ header .intro-text .skills{
 }
 
 .about-col p {
-    font-size: 1.75em;/**/
+    font-size: 1.55em;/**/
     width: 100%;
 }
 
@@ -149,6 +149,11 @@ header .intro-text .skills{
         padding-top: 20px;
     }
 
+    .hulogo {
+        margin: auto;
+        padding-bottom: 30px;
+        max-width: 500px;
+    }
 }
 
 @media(min-width:768px) {
@@ -526,4 +531,13 @@ section.success a:hover {
 
 .success p {
     padding-bottom: 20px;
+}
+
+.hulogo img {
+    margin: auto;
+    max-width: 300px;
+}
+
+.hulogo {
+    padding-bottom: 30px;
 }
