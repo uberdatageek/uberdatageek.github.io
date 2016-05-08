@@ -130,6 +130,14 @@ header .intro-text .skills{
     width: 100%;
 }
 
+.hulogo {
+    margin: auto;
+    max-width: 300px;
+}
+
+.hulogo {
+    padding-bottom: 30px;
+}
 
 @media(min-width:768px) {
     header .container {
@@ -533,11 +541,3 @@ section.success a:hover {
     padding-bottom: 20px;
 }
 
-.hulogo img {
-    margin: auto;
-    max-width: 300px;
-}
-
-.hulogo {
-    padding-bottom: 30px;
-}
