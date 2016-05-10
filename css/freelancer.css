@@ -139,6 +139,37 @@ header .intro-text .skills{
     padding-bottom: 30px;
 }
 
+.success p {
+    padding-bottom: 20px;
+}
+
+.bde {
+    max-width: 340px;
+}
+
+.bde-rw {
+    max-width: 840px;
+    margin: auto;
+}
+
+.bde-rw h2 {
+    padding-top: 35px;
+}
+
+.bde-rw p {
+    font-size: 1.75em;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.bde-rw h4 {
+    font-size: 2.0em;
+}
+
+.itunes {
+    max-width: 150px;
+}
+
 @media(min-width:768px) {
     header .container {
         padding-top: 200px;
@@ -163,6 +194,7 @@ header .intro-text .skills{
         max-width: 500px;
     }
 }
+
 
 @media(min-width:768px) {
     .navbar-fixed-top {
@@ -191,6 +223,16 @@ header .intro-text .skills{
         font-size: 1.9em;/**/
         width: 70%;
     }
+
+    .bde-rw p {
+        font-size: 1.95em;
+        padding-bottom: 35px;
+    }
+
+    .bde-rw h4 {
+        font-size: 2.20em;
+    }
+
 }
 
 .navbar {
@@ -536,8 +578,4 @@ section.success a:hover {
     color: #2c3e50;
 }
 
-
-.success p {
-    padding-bottom: 20px;
-}
 
