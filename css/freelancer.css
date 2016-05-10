@@ -152,6 +152,11 @@ header .intro-text .skills{
     margin: auto;
 }
 
+.bde-rw2 {
+    max-width: 500px;
+    margin: auto;
+}
+
 .bde-rw h2 {
     padding-top: 35px;
 }
@@ -166,8 +171,12 @@ header .intro-text .skills{
     font-size: 2.0em;
 }
 
-.itunes {
-    max-width: 150px;
+.itunes, .youtube {
+    max-width: 200px;
+}
+
+.youtube {
+    padding-top: 35px;
 }
 
 @media(min-width:768px) {
@@ -232,7 +241,18 @@ header .intro-text .skills{
     .bde-rw h4 {
         font-size: 2.20em;
     }
+    .itunes, .youtube {
+        max-width: 250px;
+    }
 
+    .youtube {
+        padding-top: 0px;
+    }
+
+    .bde-rw2 {
+        max-width: 700px;
+        margin: auto;
+    }
 }
 
 .navbar {
